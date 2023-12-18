@@ -2,6 +2,8 @@
 
 :root {
     --primary-bg: #fffbeb;
+    --sidebar-bg: #fef9c3;
+    --text-color: #1e293b;
 }
 
 *, ::before, ::after {
@@ -11,22 +13,28 @@
 
 body {
     font-family: 'Roboto';
+    height: 100dvh;
+    color: var(--text-color);
 }
 
 ul {
     list-style-type: none;
+    padding: 0px;
 }
 
 li {
-
+    display: flex;
+    align-items: center;
 }
 
 svg {
-    display: inline;
+    width: 40px;
+    height: 40px;
 }
 
 .bg {
     background-color: var(--primary-bg);
+    height: inherit;
 }
 
 .flex {
@@ -35,9 +43,57 @@ svg {
 
 
 .main-wrapper {
-
+    height: inherit;
 }
 
 .sidebar {
+    height: inherit;
+    background-color: var(--sidebar-bg);
+}
+
+.sidebar-container {
+    padding-inline: 1rem;
+    height: inherit;
+
+}
+
+.sidebar-items-container {
+    display: flex;
+    flex-grow: 1;
     flex-direction: column;
+    height: inherit;
+}
+
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding-left: 1.2rem;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.sidebar-items > li {
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.sidebar-items > li:hover {
+    text-decoration: underline solid var(--text-color) 2px;
+    text-underline-offset: 6px;
+    transform: 0.5s;
+}
+
+.dashboard-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.dashboard-logo > h2 {
+    position: relative;
+    left: -0.7rem;
 }
