@@ -2,8 +2,8 @@
 
 :root {
     --primary-bg: #fffbeb;
-    --sidebar-bg: #fef9c3;
-    --text-color: #1e293b;
+    --sidebar-bg: #fefce8;
+    --text-color: #374151;
 }
 
 *, ::before, ::after {
@@ -30,6 +30,7 @@ li {
 svg {
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .bg {
@@ -45,6 +46,8 @@ svg {
 .main-wrapper {
     height: inherit;
 }
+
+/****** Side Bar ******/
 
 .sidebar {
     height: inherit;
@@ -97,3 +100,105 @@ svg {
     position: relative;
     left: -0.7rem;
 }
+
+
+.main-content {
+    flex: 1;
+}
+
+
+button {
+    height: 2rem;
+    width: 8rem;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: var(--sidebar-bg);
+
+    border-style: groove;
+    font-weight: 700;
+    font-size: 0.85rem;
+
+    margin-left: 1rem;
+    
+}
+
+button:hover {
+    background-color: #cffafe;
+}
+
+
+/************* Navigation Bar ****************/
+
+.header {
+    background-color: white;
+
+}
+
+.header-content {
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header-search-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-search-bar > .left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-search-bar input {
+    width: 500px;
+    height: 25px;
+
+    background-color: var(--sidebar-bg);
+
+    padding-left: 6px;
+    appearance: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.header-search-bar > .right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    font-weight: 800;
+
+}
+
+.pfp {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.pfp > img {
+    background-size: contain;
+}
+
+.header-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-navbar > .left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-navbar > .left > .pfp {
+    width: 80px;
+    height: 80px;
+}
+
