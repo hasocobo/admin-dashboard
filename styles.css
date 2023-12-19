@@ -246,6 +246,14 @@ button:hover {
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    
+}
+
+.projects .card:hover {
+    cursor: pointer;
+    transform: translate(0px, -1rem);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
 .cards > .card {
