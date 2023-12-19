@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --primary-bg: #fffbeb;
+    --primary-bg: aliceblue;
     --sidebar-bg: #fefce8;
     --text-color: #374151;
+    --text-color-2: #9ca3af;
 }
 
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
+    line-height: 1.6;
 }
 
 body {
     font-family: 'Roboto';
-    height: 100dvh;
+    min-height: 100vh;
     color: var(--text-color);
 }
 
@@ -22,9 +24,13 @@ ul {
     padding: 0px;
 }
 
-li {
+li:not(.main-content li) {
     display: flex;
     align-items: center;
+}
+
+li > p {
+    color: var(--text-color-2);
 }
 
 svg {
@@ -50,7 +56,7 @@ svg {
 /****** Side Bar ******/
 
 .sidebar {
-    height: inherit;
+    min-height: 100vh;
     background-color: var(--sidebar-bg);
 }
 
@@ -103,6 +109,8 @@ svg {
 
 
 .main-content {
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
@@ -131,7 +139,8 @@ button:hover {
 
 .header {
     background-color: white;
-
+    position: sticky;
+    box-shadow: 5px 3px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -156,7 +165,7 @@ button:hover {
     width: 500px;
     height: 25px;
 
-    background-color: var(--sidebar-bg);
+    background-color: aliceblue;
 
     padding-left: 6px;
     appearance: none;
@@ -202,3 +211,82 @@ button:hover {
     height: 80px;
 }
 
+/******* Main Content *******/
+
+
+.main-content > .content {
+    padding: 30px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    gap: 2.5rem;
+}
+
+.content > .projects > .cards {
+    background-color: aliceblue;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2.5rem;
+    grid-column: 1/2;
+}
+
+.content h3 {
+    position: relative;
+    top: -10px;
+    right: -7px;
+    font-size: 1.75rem;
+}
+
+
+
+.card {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.cards > .card {
+    border-left: 8px solid #dbeafe;
+}
+
+.card > .card-content {
+}
+
+.card-text > h3 {
+    margin-bottom: .15rem;
+}
+
+.content-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-rows: repeat(auto-fit, minmax(400, 1fr));
+}
+
+.card h5 {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.announcement {
+    padding: 1rem 0;
+}
+
+.trending {
+
+}
+
+.announcement:first-child {
+    padding-top: 0;
+}
+
+.announcement:last-child {
+    border-bottom: none;
+}
+
+.main-content li {
+    border-bottom: .1px solid #e5e7eb;
+}
